@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloomful Bakery</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #f7f8f5; /* Black */
+            font-family: Arial, sans-serif;
+            color: #fff; /* White text */
+            margin: 0;
+            padding: 0;
+            background-image: url('pexels-mdsnmdsnmdsn-1405773.jpg'); 
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        header {
+            background-color: #e9ebe7; /* Dark Red */
+            padding: 20px;
+            text-align: center;
+            color: rgb(15, 14, 9);
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 10px;
+            background-color: #aba2a2; /* Darker Red */
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 5px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(10, 10, 8);
+            font-weight: bold;
+            padding: 10px;
+            transition: all 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: rgb(124, 122, 116);
+            color: black;
+            border-radius: 5px;
+        }
+        section {
+            padding: 20px;
+            background-color: #676161;
+            margin: 10px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(15, 15, 14, 0.5);
+            max-width: 90%;
+        }
+        h2, h3 {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+            color: rgb(17, 16, 10);
+        }
+        h2::after, h3::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background-color: rgb(21, 21, 17);
+            transition: width 0.4s ease-in-out;
+        }
+        h2:hover::after, h3:hover::after {
+            width: 100%;
+        }
+        .gallery-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery-images img {
+            width: 100%;
+            max-width: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .gallery-images img:hover {
+            transform: scale(1.1);
+        }
+        footer {
+            text-align: center;
+            background-color: #7f7272;
+            padding: 10px;
+            color: rgb(9, 9, 5);
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            .gallery-images img {
+                max-width: 150px;
+            }
+            section {
+                max-width: 100%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bloomful Bakery</h1>
+        <p>Delicious homemade cakes, biscuits, and more!</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home">
+        <h2>Welcome to Bloomful Bakery!</h2>
+        <p>Experience the taste of freshly baked goods made with love.</p>
+    </section>
+    
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <br>
+        <h2>Cakes</h2>
+        <ul>
+            <li>Vanilla Choco-Chips - ₹600/kg</li>
+            <li>Pineapple - ₹600/kg</li>
+            <li>Blueberry - ₹600/kg</li>
+            <li>Black Currant - ₹600/kg</li>
+            <li>Butterscotch - ₹600/kg</li>
+            <li>Strawberry - ₹600/kg</li>
+            <li>Black Forest - ₹700/kg</li>
+            <li>White Forest - ₹750/kg</li>
+            <li>Chocolate - ₹700/kg</li>
+            <li>Chocolate Oreo - ₹800/kg</li>
+            <li>Chocolate Choco-Chips - ₹800/kg</li>
+            <li>Red Velvet - ₹800/kg</li>
+            <li>Chocolate Truffle - ₹900/kg</li>
+            <li>Chocolate Ganache - ₹900/kg</li>
+            <li>Fresh Fruit Cake - ₹900/kg</li>
+            <li>Kulfi Flavored - ₹950/kg</li>
+            <li>Rasmalai Flavored - ₹1000/kg</li>
+            <li>Sponge Cake - ₹400/kg</li>
+            <li>Milk Cake - ₹600/kg</li>
+        </ul>
+        <h2>Cake Pops</h2>
+        <p>₹25 per piece</p>
+        <h2>Brownie's</h2>
+        <p>₹50 per piece</p>
+        <h2>Cup Cakes</h2>
+        <p>₹100 pack(12 Pcs)</p>
+        <p>₹50 pack(6 Pcs)</p>
+        <h2>Biscuits</h2>
+        <p>Available in Maida & Wheat Flour</p>
+        <ul>
+            <li>Butter Biscuits - ₹180 (Wheat), ₹170 (Maida)</li>
+            <li>Nankhatai Biscuits - ₹180 (Wheat), ₹170 (Maida)</li>
+            <li>Choco-Chips Biscuits - ₹180 (Wheat), ₹170 (Maida)</li>
+        </ul>
+        <p>Extra cost for adding dry fruits.</p>
+    </section>
+    
+    
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-images">
+            <img src="cake.jpg" alt="Delicious Cake">
+            <img src="Custusmizedcake.jpg" alt="Chocolate Cake">
+            <img src="spong.jpg" alt="Sponge Cake">
+            <img src="cakes.jpg" alt="Cake Pops">
+            <img src="elsa.jpg" alt="Sponge Cake">
+            <img src="girl.jpg" alt="Butter Biscuits">
+            <img src="buttercream.jpg" alt="Nankhatai Biscuits">
+            <img src="images.jpeg" alt="Cake Pops">
+            <img src="butter.jpeg" alt="Butter Biscuits">
+            <img src="Nankhatai.jpg" alt="Nankhatai Biscuits">
+            <img src="cake1.jpg" alt="Butter Biscuits">
+            <img src="cake2.jpg" alt="Nankhatai Biscuits">
+            <img src="cake4.jpg" alt="Cake Pops">
+            <img src="carcake.jpg" alt="Butter Biscuits">
+            <img src="sponge2.jpg" alt="Nankhatai Biscuits">
+        </div>
+    </section>
+
+
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Phone: <a href="tel:+918519960014" style="color: gold;">+91 8519960014</a></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Bloomful Bakery. All rights reserved.</p>
+    </footer>
+</body>
+</html>
